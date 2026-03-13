@@ -1,0 +1,135 @@
+:root {
+    --ua-blue: #0057B7;
+    --ua-yellow: #FFD700;
+    --dark: #1a1a1a;
+    --light: #f9f9f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(180deg, #ffffff 0%, #fffdf0 100%);
+    color: var(--dark);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+.logo-nav {
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--ua-blue);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-nav {
+    background: var(--ua-blue);
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 50px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 5%;
+}
+
+.main-logo {
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.acronym {
+    font-size: 6rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    background: linear-gradient(to bottom, var(--ua-blue) 50%, var(--ua-yellow) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0;
+}
+
+.fullname {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    font-size: 2.5rem;
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+/* Boutons */
+.cta-container {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-yellow { background-color: var(--ua-yellow); color: var(--dark); }
+.btn-blue { background-color: var(--ua-blue); color: white; }
+
+/* Footer */
+footer {
+    margin-top: 100px;
+    padding: 40px;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+.emails a {
+    color: var(--ua-blue);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .acronym { font-size: 4rem; }
+    .tagline { font-size: 1.8rem; }
+    .cta-container { flex-direction: column; }
+}
