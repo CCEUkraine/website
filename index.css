@@ -98,6 +98,14 @@ nav a {
     gap: 20px;
 }
 
+.cta-reminder {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
 .btn {
     padding: 15px 40px;
     border-radius: 50px;
@@ -249,5 +257,11 @@ footer {
     
     .manifesto-actions {
         padding: 30px 20px;
+    }
+
+    .cta-reminder {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
     }
 }
