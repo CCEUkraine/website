@@ -29,19 +29,9 @@ nav {
 
 .logo-nav {
     font-weight: 900;
-    font-size: 1.6rem;
-    letter-spacing: -1px;
-    
-    background: linear-gradient(135deg, #0057B7 0%, #2ecc71 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    
-    display: inline-block;
-    transition: transform 0.3s ease;
+    font-size: 1.5rem;
+    color: linear-gradient(to bottom, var(--ua-blue) 50%, var(--ua-yellow) 50%);
 }
-
-.logo-nav:hover {
-    transform: scale(1.05);
 
 nav ul {
     display: flex;
@@ -248,7 +238,9 @@ footer {
     font-size: 0.9rem;
 }
 
-/* --- SECTION MISSIONS --- */
+/* ==========================================================================
+   CORRECTION : SECTION MISSIONS CONCRÈTES (Images réduites)
+   ========================================================================== */
 
 .missions-details {
     padding: 60px 5%; /* Réduit pour moins d'espacement vertical */
