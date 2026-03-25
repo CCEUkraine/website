@@ -30,7 +30,7 @@ nav {
 .logo-nav {
     font-weight: 900;
     font-size: 1.5rem;
-    color: var(--ua-blue);
+    color: linear-gradient(to bottom, var(--ua-blue) 50%, var(--ua-yellow) 50%);
 }
 
 nav ul {
