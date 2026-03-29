@@ -361,7 +361,6 @@ footer {
     transition: transform 0.3s;
 }
 
-/* FORCER LA TAILLE DES SVG ICI */
 .social-links svg {
     width: 28px;  /* TAILLE MAXIMALE IMPOSÉE < 30px */
     height: 28px; /* TAILLE MAXIMALE IMPOSÉE < 30px */
