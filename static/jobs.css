@@ -1,0 +1,223 @@
+
+.nous-rejoindre-container {
+    max-width: 1100px;
+    margin: 40px auto 80px;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Espace entre chaque bloc de poste */
+}
+
+.poste-resume {
+    background: #ffffff;
+    border-left: 4px solid var(--ua-blue); /* Rappel sobre de la charte */
+    padding: 30px;
+    border-radius: 0 15px 15px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03); /* Ombre très légère et propre */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    transition: transform 0.2s, box-shadow 0.2s, border-left-color 0.2s;
+}
+
+.poste-resume:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    border-left-color: var(--ua-yellow); /* Changement de couleur discret au survol */
+}
+
+.poste-texte-container {
+    flex: 1;
+}
+
+.poste-titre {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.poste-texte {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444; /* Même couleur que le texte de ton manifeste */
+}
+
+/* Bouton "En savoir plus" */
+.poste-button {
+    flex-shrink: 0;
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--ua-blue);
+    color: #ffffff;
+    border: 2px solid var(--ua-blue);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.poste-button:hover {
+    background-color: #ffffff;
+    color: var(--ua-blue);
+}
+
+.hero-rejoindre {
+    padding-bottom: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.acronym-rejoindre {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.fullname-rejoindre {
+    margin-bottom: 40px;
+}
+
+/* Boîte d'introduction du manifeste de recrutement */
+.introduction-box {
+    text-align: left;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    border-top: 4px solid var(--ua-blue);
+}
+
+.intro-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Dernier paragraphe pour enlever la marge basse inutile */
+.introduction-box p.intro-paragraph:last-of-type {
+    margin-bottom: 25px;
+}
+
+.intro-conclusion {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--ua-blue);
+    text-align: center;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+.page-poste-unique {
+    max-width: 800px; /* Plus serré pour un confort de lecture optimal du texte */
+    margin: 0 auto 80px;
+    padding: 0 5%;
+}
+
+.hero-poste {
+    text-align: center;
+    padding: 60px 0 30px;
+}
+
+.titre-poste {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--dark);
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.statut-poste {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--ua-blue);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Zone de contenu */
+.contenu-poste-container {
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    border-top: 4px solid var(--ua-blue);
+}
+
+/* Ciblage direct des balises dans le conteneur */
+.contenu-poste-container h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* Gestion automatique du premier h2 de la page */
+.contenu-poste-container h2:first-of-type {
+    margin-top: 0;
+}
+
+.contenu-poste-container p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.contenu-poste-container p strong {
+    color: var(--dark);
+}
+
+.separateur-poste {
+    height: 1px;
+    background: #eaeaea;
+    margin: 50px 0 40px;
+}
+
+/* --- RESPONSIVE --- */
+
+@media (max-width: 768px) {
+    .poste-resume {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px;
+        border-radius: 0 8px 8px 0;
+    }
+
+    .poste-button {
+        width: 100%; /* Le bouton prend toute la largeur sur mobile */
+        text-align: center;
+    }
+    
+    .poste-titre {
+        font-size: 1.25rem;
+    }
+
+    .acronym-rejoindre {
+        font-size: 3rem;
+    }
+
+    .introduction-box {
+        padding: 25px 20px;
+    }
+
+    .titre-poste {
+        font-size: 2rem;
+    }
+    
+    .contenu-poste-container {
+        padding: 30px 20px;
+    }
+
+    .contenu-poste-container h2 {
+        font-size: 1.35rem;
+    }
+}
