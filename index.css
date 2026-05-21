@@ -35,6 +35,11 @@ nav {
    -webkit-text-fill-color: transparent;
 }
 
+.logo-link {
+    cursor: pointer;
+    display: inline-block;
+}
+
 nav ul {
     display: flex;
     list-style: none;
