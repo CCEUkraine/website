@@ -74,7 +74,7 @@ nav a {
     font-size: 6rem;
     font-weight: 900;
     letter-spacing: -2px;
-    background: linear-gradient(to bottom, var(--ua-blue) 50%, var(--ua-yellow) 50%);
+    background: linear-gradient(to bottom, var(--ua-blue) 55%, var(--ua-yellow) 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 0;
@@ -553,7 +553,7 @@ footer {
     .acronym-rejoindre {
         font-size: 3rem;
     }
-    
+
     .introduction-box {
         padding: 25px 20px;
     }
