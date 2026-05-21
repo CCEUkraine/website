@@ -449,6 +449,53 @@ footer {
     color: var(--ua-blue);
 }
 
+.hero-rejoindre {
+    padding-bottom: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.acronym-rejoindre {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.fullname-rejoindre {
+    margin-bottom: 40px;
+}
+
+/* Boîte d'introduction du manifeste de recrutement */
+.introduction-box {
+    text-align: left;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    border-top: 4px solid var(--ua-blue);
+}
+
+.intro-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Dernier paragraphe pour enlever la marge basse inutile */
+.introduction-box p.intro-paragraph:last-of-type {
+    margin-bottom: 25px;
+}
+
+.intro-conclusion {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--ua-blue);
+    text-align: center;
+    margin-top: 30px;
+    font-style: italic;
+}
+
 /* --- RESPONSIVE --- */
 
 @media (max-width: 768px) {
@@ -501,5 +548,13 @@ footer {
     
     .poste-titre {
         font-size: 1.25rem;
+    }
+
+    .acronym-rejoindre {
+        font-size: 3rem;
+    }
+    
+    .introduction-box {
+        padding: 25px 20px;
     }
 }
