@@ -19,55 +19,160 @@ body {
     min-height: 100vh;
 }
 
-/* Navigation */
-nav {
+/* #region Navigation */
+header {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+/* Style de la petite barre tout en haut */
+.top-bar {
+    padding: 15px 5% 0px 0px;
+}
+
+.top-bar-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end; /* Aligne tout le bloc à droite */
     align-items: center;
-    padding: 20px 5%;
+    gap: 25px;
+}
+
+/* Réseaux Sociaux */
+.nav-socials {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-socials a {
+    display: flex;
+    align-items: center;
+}
+
+.nav-socials svg {
+    width: 16px; /* Légèrement plus petit pour la top-bar */
+    height: 16px;
+    fill: #666;
+    transition: fill 0.2s, transform 0.2s;
+}
+
+.nav-socials a:hover svg {
+    fill: var(--ua-blue);
+    transform: scale(1.1);
+}
+
+/* Bouton faire un don dans la top-bar */
+.btn-donate-top {
+    background-color: var(--ua-yellow);
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 5px 16px;
+    border-radius: 50px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-donate-top:hover {
+    background-color: #e6c200;
+    transform: translateY(-1px);
+}
+
+/* Style de la barre de navigation principale (Logo + Liens) */
+.main-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px 5% 0px 5%;
 }
 
 .logo-nav {
     font-weight: 900;
     font-size: 1.5rem;
-    background: linear-gradient(to bottom, var(--ua-blue) 50%, var(--ua-yellow) 50%);
+    background: linear-gradient(to bottom, var(--ua-blue) 55%, var(--ua-yellow) 50%);
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
 }
 
-.logo-link {
-    cursor: pointer;
-    display: inline-block;
-}
-
-nav ul {
+.nav-links {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 35px; /* Légèrement augmenté pour donner de l'air à ton futur lien */
     align-items: center;
 }
 
-nav a {
+.nav-links a {
     text-decoration: none;
     color: var(--dark);
     font-weight: 600;
-    transition: 0.3s;
+    font-size: 0.95rem;
+    transition: color 0.3s;
 }
 
-.btn-nav {
-    background: var(--ua-blue);
-    color: white !important;
+.nav-links a:hover {
+    color: var(--ua-blue);
+}
+
+/* Zone Actions (Réseaux + Bouton) */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-socials {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-right: 1px solid #eee; /* Petite séparation élégante */
+    padding-right: 20px;
+}
+
+.nav-socials a {
+    display: flex;
+    align-items: center;
+}
+
+.nav-socials svg {
+    width: 20px;
+    height: 20px;
+    fill: #666;
+    transition: fill 0.2s, transform 0.2s;
+}
+
+.nav-socials a:hover svg {
+    fill: var(--ua-blue);
+    transform: scale(1.1);
+}
+
+/* Bouton faire un don de la Nav */
+.btn-donate-nav {
+    background-color: var(--ua-yellow);
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
     padding: 8px 20px;
     border-radius: 50px;
+    transition: background-color 0.2s, transform 0.2s;
 }
 
-/* Hero Section */
+.btn-donate-nav:hover {
+    background-color: #e6c200; /* Version un poil plus sombre du jaune au survol */
+    transform: translateY(-1px);
+}
+
+/* #endregion */
+
+/* #region Hero Section */
 .hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 60px 5%;
+    padding: 10px 5%;
 }
 
 .main-logo {
@@ -89,7 +194,6 @@ nav a {
     font-size: 1.2rem;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 40px;
     letter-spacing: 1px;
 }
 
@@ -99,7 +203,66 @@ nav a {
     margin-bottom: 40px;
 }
 
-/* Boutons */
+/* #endregion */
+
+/* #region Banner */
+
+.scroll-banner {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 1;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Filtre noir transparent à 40% */
+    z-index: 2;
+}
+
+/* Conteneur du texte */
+.banner-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 900px; /* Aligné avec la structure du site */
+    padding: 0 20px;
+}
+
+/* Style de la phrase en blanc */
+.tagline-banner {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.4;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Ombre portée pour détacher le texte */
+}
+
+/* #endregion */
+
+/* #region Boutons */
 .cta-container {
     display: flex;
     gap: 20px;
@@ -129,10 +292,12 @@ nav a {
 .btn-yellow { background-color: var(--ua-yellow); color: var(--dark); }
 .btn-blue { background-color: var(--ua-blue); color: white; }
 
-/* --- SECTION MANIFESTE --- */
+/* #endregion */
+
+/* #region Manifeste */
 
 .manifesto {
-    padding: 80px 5%;
+    padding: 80px 5% 0px;
     background-color: #ffffff;
     color: var(--dark);
 }
@@ -231,19 +396,9 @@ nav a {
     color: var(--ua-yellow);
 }
 
-/* Footer */
-footer {
-    margin-top: 100px;
-    padding: 40px;
-    border-top: 1px solid #eee;
-    text-align: center;
-}
+/* #endregion */
 
-.emails a {
-    color: var(--ua-blue);
-    text-decoration: none;
-    font-size: 0.9rem;
-}
+/* #region Missions */
 
 .missions-details {
     padding: 60px 5%;
@@ -344,11 +499,17 @@ footer {
     color: #444;
 }
 
+/* #endregion */
+
+/* #region Footer */
+
 footer {
     background-color: #1a1a1a;
     color: #ffffff;
+    margin-top: 100px;
     padding: 50px 5% 30px;
     text-align: center;
+    border-top: 1px solid #eee;
 }
 
 .social-links {
@@ -384,14 +545,53 @@ footer {
 .coalition-block a { text-decoration: none; color: inherit; display: flex; align-items: center; justify-content: center; gap: 15px; }
 .coalition-block img { height: 40px; }
 .copyright { font-size: 0.85rem; opacity: 0.6; margin: 20px 0 10px; }
-.emails a { color: #ffffff; text-decoration: none; font-size: 0.85rem; opacity: 0.7; }
 
-/* --- RESPONSIVE --- */
+.emails a { 
+    color: #ffffff; 
+    text-decoration: none; 
+    font-size: 0.85rem; 
+    opacity: 0.7; 
+}
+
+/* #endregion */
+
+/* #region Responsive */
 
 @media (max-width: 768px) {
     .acronym { font-size: 4rem; }
     .tagline { font-size: 1.8rem; }
     .cta-container { flex-direction: column; }
+
+    .top-bar-container {
+        justify-content: center; /* Centre les réseaux et le don sur mobile */
+        gap: 15px;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 5%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 5%;
+    }
+    .nav-right {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+    .nav-links {
+        gap: 20px;
+        padding-left: 0;
+    }
+    
+    .nav-socials {
+        border-right: none;
+        padding-right: 0;
+    }
 
     .mission-row, .mission-row.reverse {
         flex-direction: column;
@@ -405,7 +605,7 @@ footer {
         height: 220px; /* Encore plus petit sur mobile */
     }
 
-        .combats-grid {
+    .combats-grid {
         grid-template-columns: 1fr;
     }
     
@@ -423,3 +623,5 @@ footer {
         padding: 40px 20px;
     }
 }
+
+/* #endregion */
