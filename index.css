@@ -27,14 +27,17 @@ header {
 
 /* Style de la petite barre tout en haut */
 .top-bar {
-    padding: 15px 5% 0px 0px;
+    width: 100%;
+    padding: 8px 5%;
+    display: flex;         /* On force la ligne à devenir un conteneur Flex */
+    justify-content: flex-end; /* On pousse tout le monde vers la droite de l'écran */
 }
 
 .top-bar-container {
+    width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
     display: flex;
-    justify-content: flex-end; /* Aligne tout le bloc à droite */
+    justify-content: flex-end; /* Aligne tout le sous-bloc à droite */
     align-items: center;
     gap: 25px;
 }
@@ -52,7 +55,7 @@ header {
 }
 
 .nav-socials svg {
-    width: 16px; /* Légèrement plus petit pour la top-bar */
+    width: 16px; /* Discret pour la top-bar */
     height: 16px;
     fill: #666;
     transition: fill 0.2s, transform 0.2s;
@@ -80,12 +83,13 @@ header {
     transform: translateY(-1px);
 }
 
-/* Style de la barre de navigation principale (Logo + Liens) */
+/* Style de la barre de navigation principale (Logo + Menu) */
 .main-nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 8px 5% 0px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5% 0px 5%;
+    width: 100%;
 }
 
 .logo-nav {
@@ -99,7 +103,7 @@ header {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 35px; /* Légèrement augmenté pour donner de l'air à ton futur lien */
+    gap: 35px;
     align-items: center;
 }
 
@@ -114,56 +118,6 @@ header {
 .nav-links a:hover {
     color: var(--ua-blue);
 }
-
-/* Zone Actions (Réseaux + Bouton) */
-.nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.nav-socials {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    border-right: 1px solid #eee; /* Petite séparation élégante */
-    padding-right: 20px;
-}
-
-.nav-socials a {
-    display: flex;
-    align-items: center;
-}
-
-.nav-socials svg {
-    width: 20px;
-    height: 20px;
-    fill: #666;
-    transition: fill 0.2s, transform 0.2s;
-}
-
-.nav-socials a:hover svg {
-    fill: var(--ua-blue);
-    transform: scale(1.1);
-}
-
-/* Bouton faire un don de la Nav */
-.btn-donate-nav {
-    background-color: var(--ua-yellow);
-    color: var(--dark);
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.9rem;
-    padding: 8px 20px;
-    border-radius: 50px;
-    transition: background-color 0.2s, transform 0.2s;
-}
-
-.btn-donate-nav:hover {
-    background-color: #e6c200; /* Version un poil plus sombre du jaune au survol */
-    transform: translateY(-1px);
-}
-
 /* #endregion */
 
 /* #region Hero Section */
@@ -587,7 +541,7 @@ footer {
         gap: 20px;
         padding-left: 0;
     }
-    
+
     .nav-socials {
         border-right: none;
         padding-right: 0;
