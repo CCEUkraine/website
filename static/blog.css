@@ -123,3 +123,61 @@
     color: var(--dark);
     border-bottom: 2px solid var(--ua-yellow); /* Variable index.css */
 }
+
+/* =========================================
+   Gestion des Onglets (Tabs)
+   ========================================= */
+
+.tabs-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap; /* Permet aux boutons de passer à la ligne sur petit écran */
+}
+
+.tab-btn {
+    background-color: transparent;
+    border: 2px solid var(--ua-blue);
+    color: var(--ua-blue);
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    background-color: rgba(0, 87, 183, 0.1); /* Bleu très clair au survol */
+}
+
+.tab-btn.active {
+    background-color: var(--ua-blue);
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 87, 183, 0.3);
+}
+
+/* Gestion de l'affichage des contenus */
+.tab-content {
+    display: none; /* Caché par défaut */
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.tab-content.active {
+    display: block; /* Affiché si actif */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Couleurs spécifiques pour les tags de manifestations et événements régionaux */
+.cat-manif {
+    background-color: #e63946; 
+}
+
+.cat-region {
+    background-color: #2a9d8f; 
+}

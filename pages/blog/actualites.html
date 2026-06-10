@@ -195,6 +195,28 @@
         </div>
     </footer>
 
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // 1. Retirer la classe "active" de tous les boutons et contenus
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+
+                // 2. Ajouter la classe "active" au bouton cliqué
+                btn.classList.add('active');
+
+                // 3. Récupérer l'ID cible et afficher le contenu correspondant
+                const targetId = btn.getAttribute('data-tab');
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+    });
+</script>
+
 </body>
 
 </html>
