@@ -5,7 +5,7 @@
 
 .blog-section {
     padding: 60px 5%;
-    background-color: var(--light);
+    background-color: var(--light); /* Utilisation de la variable de fond clair définie dans index.css */
 }
 
 .blog-header {
@@ -19,7 +19,7 @@
 .blog-header h2 {
     font-size: 2.2rem;
     font-weight: 800;
-    color: var(--dark);
+    color: var(--dark); /* Variable index.css */
     margin-bottom: 15px;
 }
 
@@ -29,7 +29,7 @@
     line-height: 1.6;
 }
 
-/* Grille automatique (s'adapte à l'écran) */
+/* Grille automatique et fluide pour les cartes */
 .blog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -37,17 +37,19 @@
     margin-bottom: 40px;
 }
 
-/* Style de la carte individuelle */
+/* Style de la carte individuelle (la box) */
 .blog-card {
     background: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #eaeaea;
+    /* L'effet de relief : une ombre douce et large */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
 }
 
+/* Accentuation du relief au survol pour un effet interactif */
 .blog-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -58,7 +60,6 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    flex-grow: 1;
 }
 
 /* Métadonnées : Catégorie (Sénat/AN) et Date */
@@ -70,7 +71,7 @@
 }
 
 .blog-category {
-    background-color: var(--ua-blue);
+    background-color: var(--ua-blue); /* Variable index.css */
     color: #ffffff;
     padding: 6px 14px;
     border-radius: 50px;
@@ -86,7 +87,7 @@
     font-size: 0.9rem;
 }
 
-/* Typographie de la carte */
+/* Typographie interne de la carte */
 .blog-title {
     font-size: 1.3rem;
     color: var(--dark);
@@ -100,11 +101,10 @@
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 25px;
-    /* Le flex-grow repousse le bouton toujours tout en bas, même si les textes n'ont pas la même taille */
-    flex-grow: 1; 
+    flex-grow: 1; /* Repousse le bouton vers le bas */
 }
 
-/* Bouton spécifique au blog (léger et épuré) */
+/* Pied de carte et bouton */
 .blog-card-footer {
     margin-top: auto;
 }
@@ -121,5 +121,5 @@
 
 .btn-blog:hover {
     color: var(--dark);
-    border-bottom: 2px solid var(--ua-yellow);
+    border-bottom: 2px solid var(--ua-yellow); /* Variable index.css */
 }
