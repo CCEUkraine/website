@@ -181,3 +181,64 @@
 .cat-region {
     background-color: #2a9d8f; 
 }
+
+/* =========================================
+   État vide (Empty State) - Recrutement
+   ========================================= */
+
+.empty-state {
+    text-align: center;
+    background-color: #ffffff;
+    /* Une bordure en pointillés pour l'effet "emplacement à remplir" */
+    border: 2px dashed #cbd5e1; 
+    border-radius: 12px;
+    padding: 60px 20px;
+    max-width: 700px;
+    margin: 0 auto; /* Permet de centrer le bloc si la grille est vide */
+    transition: border-color 0.3s ease;
+}
+
+.empty-state:hover {
+    border-color: var(--ua-blue);
+}
+
+.empty-state-icon {
+    color: var(--ua-blue);
+    margin-bottom: 20px;
+}
+
+.empty-state-title {
+    font-size: 1.5rem;
+    color: var(--dark);
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.empty-state-text {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 35px;
+    line-height: 1.6;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Bouton d'action spécifique à cet encart */
+.btn-empty-state {
+    display: inline-block;
+    background-color: var(--ua-blue);
+    color: #ffffff;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-empty-state:hover {
+    background-color: #004494; /* Bleu légèrement plus foncé au survol */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 87, 183, 0.3);
+    color: #ffffff; /* S'assure que le texte reste blanc */
+}
