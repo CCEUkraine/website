@@ -536,7 +536,7 @@ footer {
 
 /* #region Responsive */
 
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
     .acronym { font-size: 4rem; }
     .tagline { font-size: 1.8rem; }
     .cta-container { flex-direction: column; }
