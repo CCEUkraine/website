@@ -570,12 +570,11 @@ footer {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 4vh;
+        top: 3vh;
         left: 0;
         width: 100%;
         background-color: #ffffff;
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-        padding: 10px 0;
         gap: 0;
         max-height: 0; /* Masqué */
         overflow: hidden;
