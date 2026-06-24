@@ -127,12 +127,11 @@ header {
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
-    height: 21px;
+    width: 26px;
+    height: 18px;
     background: transparent;
     border: none;
     cursor: pointer;
-    z-index: 10;
     padding: 0;
 }
 
@@ -547,13 +546,13 @@ footer {
     }
 
     .main-nav {
-        display: flex !important;
-        flex-direction: row !important; /* Garde le logo et le burger alignés horizontalement */
-        justify-content: space-between !important;
-        align-items: center !important;
-        padding: 15px 5% !important;
-        position: relative !important; /* CRUCIAL : dit au menu de ne pas descendre plus bas que ce bloc */
-        width: 100% !important;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 5%;
+        gap: 0;
     }
 
     nav {
@@ -567,25 +566,17 @@ footer {
         width: 100%;
     }
     .nav-links {
-        display: flex;
+        display: none; /* Masqué par défaut */
+        width: 100%;   /* Force le retour à la ligne grâce au wrap */
         flex-direction: column;
-        position: absolute;
-        top: 3vh;
-        left: 0;
-        width: 100%;
-        background-color: #ffffff;
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
         gap: 0;
-        max-height: 0; /* Masqué */
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
-        z-index: 999;
+        padding: 15px 0 0 0;
+        margin-top: 10px;
     }
 
     /* Quand le menu est ouvert */
     .nav-links.open {
-        max-height: 300px; /* Ajuste selon la hauteur totale de tes liens */
-        border-bottom: 2px solid var(--ua-blue);
+        display: flex;
     }
 
     .nav-links li {
